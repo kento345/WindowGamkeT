@@ -93,6 +93,15 @@
     <ClCompile Include="draw_resource\quad_polygon.cpp">
       <Filter>draw_resource</Filter>
     </ClCompile>
+    <ClCompile Include="object\Player.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Game_Object.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\Game_Object_Manager.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="directx\DXGI.h">
@@ -154,6 +163,15 @@
     </ClInclude>
     <ClInclude Include="draw_resource\quad_polygon.h">
       <Filter>draw_resource</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Player.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Game_Object.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\Game_Object_Manager.h">
+      <Filter>object</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

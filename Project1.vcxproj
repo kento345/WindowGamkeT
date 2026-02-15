@@ -144,7 +144,10 @@
     <ClInclude Include="draw_resource\quad_polygon.h" />
     <ClInclude Include="draw_resource\triangle_polygon.h" />
     <ClInclude Include="object\camera.h" />
+    <ClInclude Include="object\Game_Object.h" />
+    <ClInclude Include="object\Game_Object_Manager.h" />
     <ClInclude Include="object\object.h" />
+    <ClInclude Include="object\Player.h" />
     <ClInclude Include="window\input.h" />
     <ClInclude Include="window\window.h" />
   </ItemGroup>
@@ -167,7 +170,10 @@
     <ClCompile Include="draw_resource\triangle_polygon.cpp" />
     <ClCompile Include="entry\entry.cpp" />
     <ClCompile Include="object\camera.cpp" />
+    <ClCompile Include="object\Game_Object.cpp" />
+    <ClCompile Include="object\Game_Object_Manager.cpp" />
     <ClCompile Include="object\object.cpp" />
+    <ClCompile Include="object\Player.cpp" />
     <ClCompile Include="window\input.cpp" />
     <ClCompile Include="window\window.cpp" />
   </ItemGroup>
