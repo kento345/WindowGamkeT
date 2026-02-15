@@ -102,6 +102,12 @@
     <ClCompile Include="object\Game_Object_Manager.cpp">
       <Filter>object</Filter>
     </ClCompile>
+    <ClCompile Include="draw_resource\Shape.cpp">
+      <Filter>draw_resource</Filter>
+    </ClCompile>
+    <ClCompile Include="draw_resource\ShapeContainer.cpp">
+      <Filter>draw_resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="directx\DXGI.h">
@@ -172,6 +178,12 @@
     </ClInclude>
     <ClInclude Include="object\Game_Object_Manager.h">
       <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="draw_resource\Shape.h">
+      <Filter>draw_resource</Filter>
+    </ClInclude>
+    <ClInclude Include="draw_resource\ShapeContainer.h">
+      <Filter>draw_resource</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
