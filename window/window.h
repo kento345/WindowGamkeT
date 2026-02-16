@@ -1,43 +1,37 @@
 #pragma once
 
-#include <Windows.h>
-#include <string>
+#include<Windows.h>
+#include<string>
 
-//ウィンドウ制御クラス
-class window final
+
+class Window final
 {
 public:
-    //コンストラクタ
-    window() = default;
+	struct Window& instance()noexcept
+	{
+		static Window instance;
+		return instance;
+	}
 
-    // デストラクタ
-    ~window() = default;
+	HRESULT create(HINSTANCE instance, int width, int heigth, std::string_view name)noexcept;
 
-    /*
-    * @brief           ウィンドウの生成 
-    * @param instance  インスタンスハンドル
-    * @param width     横幅
-    * @param heigtht   縦幅
-    * @param name      ウィンドウ名
-    * @return          生成の成否
-    */
-    HRESULT create(HINSTANCE instance, int width, int height, std::string_view name) noexcept;
+	bool messageLoop()const noexcept;
 
-    //@brief メッセージループ
-    bool messageLoop() const noexcept;
+	HWND handle()const noexcept;
 
-    //@brief  ウィンドウハンドルを取得
-    //@return ウィンドウハンドル
-    HWND handle() const noexcept;
+	std::pair<int, int>size()const noexcept;
+private:
+	Window() = default;
+	~Window() = default;
 
-    //@brief  ウィンドウのサイズを取得
-    //@return ウィンドウのサイズ(横幅,縦幅)
-    std::pair<int, int> size() const noexcept;
-
+	Window(const Window& r) = delete;
+	Window& operator=(const Window& r) = delete;
+	Window(Window&& r) = delete;
+	Window& operator = (Window&& r) = delete;
 
 private:
-    HWND handle_{};  /// ウィンドウハンドル
-    int  witdh_{};   /// ウィンドウ横幅
-    int  height_{};  /// ウィンドウ縦幅
+	HWND handle_{};
+	int width_{};
+	int height_{};
 };
 

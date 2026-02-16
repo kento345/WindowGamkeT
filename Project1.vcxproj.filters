@@ -30,160 +30,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="entry\entry.cpp">
-      <Filter>entry</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\DXGI.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\fence.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\pipline_state_object.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\render_target.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\root_signature.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\shader.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\swap_chain.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\command_allocator.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\command_list.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\command_queue.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\descriptor_heap.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\device.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="draw_resource\triangle_polygon.cpp">
-      <Filter>draw_resource</Filter>
-    </ClCompile>
-    <ClCompile Include="window\window.cpp">
+    <ClCompile Include="window\Input.cpp">
       <Filter>window</Filter>
     </ClCompile>
-    <ClCompile Include="directx\constant_buffer.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="object\camera.cpp">
-      <Filter>object</Filter>
-    </ClCompile>
-    <ClCompile Include="object\object.cpp">
-      <Filter>object</Filter>
-    </ClCompile>
-    <ClCompile Include="directx\depth_buffer.cpp">
-      <Filter>directx</Filter>
-    </ClCompile>
-    <ClCompile Include="window\input.cpp">
+    <ClCompile Include="window\Window.cpp">
       <Filter>window</Filter>
     </ClCompile>
-    <ClCompile Include="draw_resource\quad_polygon.cpp">
-      <Filter>draw_resource</Filter>
+    <ClCompile Include="Device.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="object\Player.cpp">
-      <Filter>object</Filter>
-    </ClCompile>
-    <ClCompile Include="object\Game_Object.cpp">
-      <Filter>object</Filter>
-    </ClCompile>
-    <ClCompile Include="object\Game_Object_Manager.cpp">
-      <Filter>object</Filter>
-    </ClCompile>
-    <ClCompile Include="draw_resource\Shape.cpp">
-      <Filter>draw_resource</Filter>
-    </ClCompile>
-    <ClCompile Include="draw_resource\ShapeContainer.cpp">
-      <Filter>draw_resource</Filter>
+    <ClCompile Include="DXGI.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="directx\DXGI.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\fence.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\pipline_state_object.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\render_target.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\root_signature.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\shader.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\swap_chain.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\command_allocator.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\command_list.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\command_queue.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\descriptor_heap.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\device.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="draw_resource\triangle_polygon.h">
-      <Filter>draw_resource</Filter>
-    </ClInclude>
-    <ClInclude Include="window\window.h">
+    <ClInclude Include="window\Input.h">
       <Filter>window</Filter>
     </ClInclude>
-    <ClInclude Include="directx\constant_buffer.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="object\camera.h">
-      <Filter>object</Filter>
-    </ClInclude>
-    <ClInclude Include="object\object.h">
-      <Filter>object</Filter>
-    </ClInclude>
-    <ClInclude Include="directx\depth_buffer.h">
-      <Filter>directx</Filter>
-    </ClInclude>
-    <ClInclude Include="window\input.h">
+    <ClInclude Include="window\Window.h">
       <Filter>window</Filter>
     </ClInclude>
-    <ClInclude Include="draw_resource\quad_polygon.h">
-      <Filter>draw_resource</Filter>
+    <ClInclude Include="Device.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="object\Player.h">
-      <Filter>object</Filter>
-    </ClInclude>
-    <ClInclude Include="object\Game_Object.h">
-      <Filter>object</Filter>
-    </ClInclude>
-    <ClInclude Include="object\Game_Object_Manager.h">
-      <Filter>object</Filter>
-    </ClInclude>
-    <ClInclude Include="draw_resource\Shape.h">
-      <Filter>draw_resource</Filter>
-    </ClInclude>
-    <ClInclude Include="draw_resource\ShapeContainer.h">
-      <Filter>draw_resource</Filter>
+    <ClInclude Include="DXGI.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

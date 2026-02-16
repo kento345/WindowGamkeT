@@ -18,6 +18,18 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Device.cpp" />
+    <ClCompile Include="DXGI.cpp" />
+    <ClCompile Include="window\Input.cpp" />
+    <ClCompile Include="window\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Device.h" />
+    <ClInclude Include="DXGI.h" />
+    <ClInclude Include="window\Input.h" />
+    <ClInclude Include="window\Window.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -126,61 +138,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="directx\command_allocator.h" />
-    <ClInclude Include="directx\command_list.h" />
-    <ClInclude Include="directx\command_queue.h" />
-    <ClInclude Include="directx\constant_buffer.h" />
-    <ClInclude Include="directx\depth_buffer.h" />
-    <ClInclude Include="directx\descriptor_heap.h" />
-    <ClInclude Include="directx\device.h" />
-    <ClInclude Include="directx\DXGI.h" />
-    <ClInclude Include="directx\fence.h" />
-    <ClInclude Include="directx\pipline_state_object.h" />
-    <ClInclude Include="directx\render_target.h" />
-    <ClInclude Include="directx\root_signature.h" />
-    <ClInclude Include="directx\shader.h" />
-    <ClInclude Include="directx\swap_chain.h" />
-    <ClInclude Include="draw_resource\quad_polygon.h" />
-    <ClInclude Include="draw_resource\Shape.h" />
-    <ClInclude Include="draw_resource\ShapeContainer.h" />
-    <ClInclude Include="draw_resource\triangle_polygon.h" />
-    <ClInclude Include="object\camera.h" />
-    <ClInclude Include="object\Game_Object.h" />
-    <ClInclude Include="object\Game_Object_Manager.h" />
-    <ClInclude Include="object\object.h" />
-    <ClInclude Include="object\Player.h" />
-    <ClInclude Include="window\input.h" />
-    <ClInclude Include="window\window.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="directx\command_allocator.cpp" />
-    <ClCompile Include="directx\command_list.cpp" />
-    <ClCompile Include="directx\command_queue.cpp" />
-    <ClCompile Include="directx\constant_buffer.cpp" />
-    <ClCompile Include="directx\depth_buffer.cpp" />
-    <ClCompile Include="directx\descriptor_heap.cpp" />
-    <ClCompile Include="directx\device.cpp" />
-    <ClCompile Include="directx\DXGI.cpp" />
-    <ClCompile Include="directx\fence.cpp" />
-    <ClCompile Include="directx\pipline_state_object.cpp" />
-    <ClCompile Include="directx\render_target.cpp" />
-    <ClCompile Include="directx\root_signature.cpp" />
-    <ClCompile Include="directx\shader.cpp" />
-    <ClCompile Include="directx\swap_chain.cpp" />
-    <ClCompile Include="draw_resource\quad_polygon.cpp" />
-    <ClCompile Include="draw_resource\Shape.cpp" />
-    <ClCompile Include="draw_resource\ShapeContainer.cpp" />
-    <ClCompile Include="draw_resource\triangle_polygon.cpp" />
-    <ClCompile Include="entry\entry.cpp" />
-    <ClCompile Include="object\camera.cpp" />
-    <ClCompile Include="object\Game_Object.cpp" />
-    <ClCompile Include="object\Game_Object_Manager.cpp" />
-    <ClCompile Include="object\object.cpp" />
-    <ClCompile Include="object\Player.cpp" />
-    <ClCompile Include="window\input.cpp" />
-    <ClCompile Include="window\window.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
