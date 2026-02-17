@@ -19,14 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Device.cpp" />
-    <ClCompile Include="DXGI.cpp" />
+    <ClCompile Include="directx\Device.cpp" />
+    <ClCompile Include="directx\DXGI.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Device.h" />
-    <ClInclude Include="DXGI.h" />
+    <ClInclude Include="directx\Device.h" />
+    <ClInclude Include="directx\DXGI.h" />
+    <ClInclude Include="util.h" />
     <ClInclude Include="window\Input.h" />
     <ClInclude Include="window\Window.h" />
   </ItemGroup>
