@@ -42,6 +42,15 @@
     <ClCompile Include="directx\DXGI.cpp">
       <Filter>directx</Filter>
     </ClCompile>
+    <ClCompile Include="directx\Fence.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\CommandAllocator.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\CommandList.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
@@ -58,6 +67,15 @@
     </ClInclude>
     <ClInclude Include="util.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\Fence.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\CommandAllocator.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\CommandList.h">
+      <Filter>directx</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
