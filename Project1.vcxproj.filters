@@ -51,6 +51,12 @@
     <ClCompile Include="directx\CommandList.cpp">
       <Filter>directx</Filter>
     </ClCompile>
+    <ClCompile Include="directx\CommandQueue.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\DescriptorHeap.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
@@ -75,6 +81,12 @@
       <Filter>directx</Filter>
     </ClInclude>
     <ClInclude Include="directx\CommandList.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\CommandQueue.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\DescriptorHeap.h">
       <Filter>directx</Filter>
     </ClInclude>
   </ItemGroup>

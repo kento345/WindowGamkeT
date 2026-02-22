@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClCompile Include="directx\CommandAllocator.cpp" />
     <ClCompile Include="directx\CommandList.cpp" />
+    <ClCompile Include="directx\CommandQueue.cpp" />
+    <ClCompile Include="directx\DescriptorHeap.cpp" />
     <ClCompile Include="directx\Device.cpp" />
     <ClCompile Include="directx\DXGI.cpp" />
     <ClCompile Include="directx\Fence.cpp" />
@@ -30,6 +32,8 @@
   <ItemGroup>
     <ClInclude Include="directx\CommandAllocator.h" />
     <ClInclude Include="directx\CommandList.h" />
+    <ClInclude Include="directx\CommandQueue.h" />
+    <ClInclude Include="directx\DescriptorHeap.h" />
     <ClInclude Include="directx\Device.h" />
     <ClInclude Include="directx\DXGI.h" />
     <ClInclude Include="directx\Fence.h" />
