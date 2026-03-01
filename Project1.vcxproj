@@ -22,10 +22,12 @@
     <ClCompile Include="directx\CommandAllocator.cpp" />
     <ClCompile Include="directx\CommandList.cpp" />
     <ClCompile Include="directx\CommandQueue.cpp" />
+    <ClCompile Include="directx\ConstantBuffer.cpp" />
     <ClCompile Include="directx\DescriptorHeap.cpp" />
     <ClCompile Include="directx\Device.cpp" />
     <ClCompile Include="directx\DXGI.cpp" />
     <ClCompile Include="directx\Fence.cpp" />
+    <ClCompile Include="directx\Shader.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
   </ItemGroup>
@@ -33,10 +35,12 @@
     <ClInclude Include="directx\CommandAllocator.h" />
     <ClInclude Include="directx\CommandList.h" />
     <ClInclude Include="directx\CommandQueue.h" />
+    <ClInclude Include="directx\ConstantBuffer.h" />
     <ClInclude Include="directx\DescriptorHeap.h" />
     <ClInclude Include="directx\Device.h" />
     <ClInclude Include="directx\DXGI.h" />
     <ClInclude Include="directx\Fence.h" />
+    <ClInclude Include="directx\Shader.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="window\Input.h" />
     <ClInclude Include="window\Window.h" />

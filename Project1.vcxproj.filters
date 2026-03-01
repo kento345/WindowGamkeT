@@ -57,6 +57,12 @@
     <ClCompile Include="directx\DescriptorHeap.cpp">
       <Filter>directx</Filter>
     </ClCompile>
+    <ClCompile Include="directx\Shader.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\ConstantBuffer.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
@@ -87,6 +93,12 @@
       <Filter>directx</Filter>
     </ClInclude>
     <ClInclude Include="directx\DescriptorHeap.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\Shader.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\ConstantBuffer.h">
       <Filter>directx</Filter>
     </ClInclude>
   </ItemGroup>
