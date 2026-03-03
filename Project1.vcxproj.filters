@@ -63,6 +63,9 @@
     <ClCompile Include="directx\ConstantBuffer.cpp">
       <Filter>directx</Filter>
     </ClCompile>
+    <ClCompile Include="directx\DepthBuffer.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
@@ -99,6 +102,9 @@
       <Filter>directx</Filter>
     </ClInclude>
     <ClInclude Include="directx\ConstantBuffer.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\DepthBuffer.h">
       <Filter>directx</Filter>
     </ClInclude>
   </ItemGroup>

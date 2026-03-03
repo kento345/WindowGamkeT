@@ -1,5 +1,5 @@
 #include "Window.h"
-#include"Input.h"
+#include "Input.h"
 
 namespace {
 	LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
