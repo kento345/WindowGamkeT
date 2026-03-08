@@ -66,6 +66,9 @@
     <ClCompile Include="directx\DepthBuffer.cpp">
       <Filter>directx</Filter>
     </ClCompile>
+    <ClCompile Include="directx\RootSignature.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
@@ -105,6 +108,9 @@
       <Filter>directx</Filter>
     </ClInclude>
     <ClInclude Include="directx\DepthBuffer.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\RootSignature.h">
       <Filter>directx</Filter>
     </ClInclude>
   </ItemGroup>

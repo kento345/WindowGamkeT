@@ -28,6 +28,7 @@
     <ClCompile Include="directx\Device.cpp" />
     <ClCompile Include="directx\DXGI.cpp" />
     <ClCompile Include="directx\Fence.cpp" />
+    <ClCompile Include="directx\RootSignature.cpp" />
     <ClCompile Include="directx\Shader.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
@@ -42,6 +43,7 @@
     <ClInclude Include="directx\Device.h" />
     <ClInclude Include="directx\DXGI.h" />
     <ClInclude Include="directx\Fence.h" />
+    <ClInclude Include="directx\RootSignature.h" />
     <ClInclude Include="directx\Shader.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="window\Input.h" />
