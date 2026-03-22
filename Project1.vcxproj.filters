@@ -75,7 +75,7 @@
     <ClCompile Include="directx\RenderTarget.cpp">
       <Filter>directx</Filter>
     </ClCompile>
-    <ClCompile Include="directx\PiplineState.cpp">
+    <ClCompile Include="directx\PiplineStateObject.cpp">
       <Filter>directx</Filter>
     </ClCompile>
   </ItemGroup>
@@ -128,7 +128,7 @@
     <ClInclude Include="directx\RenderTarget.h">
       <Filter>directx</Filter>
     </ClInclude>
-    <ClInclude Include="directx\PiplineState.h">
+    <ClInclude Include="directx\PiplineStateObject.h">
       <Filter>directx</Filter>
     </ClInclude>
   </ItemGroup>
