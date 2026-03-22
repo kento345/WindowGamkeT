@@ -7,7 +7,7 @@
 class Window final
 {
 public:
-	struct Window& instance()noexcept
+	static Window& instance()noexcept
 	{
 		static Window instance;
 		return instance;

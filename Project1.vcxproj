@@ -28,8 +28,11 @@
     <ClCompile Include="directx\Device.cpp" />
     <ClCompile Include="directx\DXGI.cpp" />
     <ClCompile Include="directx\Fence.cpp" />
+    <ClCompile Include="directx\PiplineState.cpp" />
+    <ClCompile Include="directx\RenderTarget.cpp" />
     <ClCompile Include="directx\RootSignature.cpp" />
     <ClCompile Include="directx\Shader.cpp" />
+    <ClCompile Include="directx\SwapChain.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
   </ItemGroup>
@@ -43,8 +46,11 @@
     <ClInclude Include="directx\Device.h" />
     <ClInclude Include="directx\DXGI.h" />
     <ClInclude Include="directx\Fence.h" />
+    <ClInclude Include="directx\PiplineState.h" />
+    <ClInclude Include="directx\RenderTarget.h" />
     <ClInclude Include="directx\RootSignature.h" />
     <ClInclude Include="directx\Shader.h" />
+    <ClInclude Include="directx\SwapChain.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="window\Input.h" />
     <ClInclude Include="window\Window.h" />

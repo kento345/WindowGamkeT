@@ -69,6 +69,15 @@
     <ClCompile Include="directx\RootSignature.cpp">
       <Filter>directx</Filter>
     </ClCompile>
+    <ClCompile Include="directx\SwapChain.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\RenderTarget.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
+    <ClCompile Include="directx\PiplineState.cpp">
+      <Filter>directx</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
@@ -111,6 +120,15 @@
       <Filter>directx</Filter>
     </ClInclude>
     <ClInclude Include="directx\RootSignature.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\SwapChain.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\RenderTarget.h">
+      <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="directx\PiplineState.h">
       <Filter>directx</Filter>
     </ClInclude>
   </ItemGroup>
