@@ -33,6 +33,10 @@
     <ClCompile Include="directx\RootSignature.cpp" />
     <ClCompile Include="directx\Shader.cpp" />
     <ClCompile Include="directx\SwapChain.cpp" />
+    <ClCompile Include="draw_resource\QuadPolygon.cpp" />
+    <ClCompile Include="draw_resource\Shape.cpp" />
+    <ClCompile Include="draw_resource\ShapeContainer.cpp" />
+    <ClCompile Include="draw_resource\TrianglePolygon.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
   </ItemGroup>
@@ -51,6 +55,10 @@
     <ClInclude Include="directx\RootSignature.h" />
     <ClInclude Include="directx\Shader.h" />
     <ClInclude Include="directx\SwapChain.h" />
+    <ClInclude Include="draw_resource\QuadPolygon.h" />
+    <ClInclude Include="draw_resource\Shape.h" />
+    <ClInclude Include="draw_resource\ShapeContainer.h" />
+    <ClInclude Include="draw_resource\TrianglePolygon.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="window\Input.h" />
     <ClInclude Include="window\Window.h" />

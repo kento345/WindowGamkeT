@@ -78,6 +78,18 @@
     <ClCompile Include="directx\PiplineStateObject.cpp">
       <Filter>directx</Filter>
     </ClCompile>
+    <ClCompile Include="draw_resource\QuadPolygon.cpp">
+      <Filter>draw_resource</Filter>
+    </ClCompile>
+    <ClCompile Include="draw_resource\Shape.cpp">
+      <Filter>draw_resource</Filter>
+    </ClCompile>
+    <ClCompile Include="draw_resource\TrianglePolygon.cpp">
+      <Filter>draw_resource</Filter>
+    </ClCompile>
+    <ClCompile Include="draw_resource\ShapeContainer.cpp">
+      <Filter>draw_resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
@@ -130,6 +142,18 @@
     </ClInclude>
     <ClInclude Include="directx\PiplineStateObject.h">
       <Filter>directx</Filter>
+    </ClInclude>
+    <ClInclude Include="draw_resource\QuadPolygon.h">
+      <Filter>draw_resource</Filter>
+    </ClInclude>
+    <ClInclude Include="draw_resource\Shape.h">
+      <Filter>draw_resource</Filter>
+    </ClInclude>
+    <ClInclude Include="draw_resource\TrianglePolygon.h">
+      <Filter>draw_resource</Filter>
+    </ClInclude>
+    <ClInclude Include="draw_resource\ShapeContainer.h">
+      <Filter>draw_resource</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
