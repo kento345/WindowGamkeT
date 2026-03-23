@@ -90,6 +90,15 @@
     <ClCompile Include="draw_resource\ShapeContainer.cpp">
       <Filter>draw_resource</Filter>
     </ClCompile>
+    <ClCompile Include="Object\Enemy.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Object.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\GameObject.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
@@ -154,6 +163,15 @@
     </ClInclude>
     <ClInclude Include="draw_resource\ShapeContainer.h">
       <Filter>draw_resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Enemy.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Object.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\GameObject.h">
+      <Filter>object</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
