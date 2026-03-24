@@ -39,6 +39,7 @@
     <ClCompile Include="draw_resource\TrianglePolygon.cpp" />
     <ClCompile Include="Object\Enemy.cpp" />
     <ClCompile Include="Object\GameObject.cpp" />
+    <ClCompile Include="Object\GameObjectManager.cpp" />
     <ClCompile Include="Object\Object.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
@@ -64,6 +65,7 @@
     <ClInclude Include="draw_resource\TrianglePolygon.h" />
     <ClInclude Include="Object\Enemy.h" />
     <ClInclude Include="Object\GameObject.h" />
+    <ClInclude Include="Object\GameObjectManager.h" />
     <ClInclude Include="Object\Object.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="window\Input.h" />

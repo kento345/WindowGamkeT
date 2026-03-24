@@ -99,6 +99,9 @@
     <ClCompile Include="Object\GameObject.cpp">
       <Filter>object</Filter>
     </ClCompile>
+    <ClCompile Include="Object\GameObjectManager.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
@@ -171,6 +174,9 @@
       <Filter>object</Filter>
     </ClInclude>
     <ClInclude Include="Object\GameObject.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\GameObjectManager.h">
       <Filter>object</Filter>
     </ClInclude>
   </ItemGroup>

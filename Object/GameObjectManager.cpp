@@ -1,0 +1,111 @@
+#include "GameObjectManager.h"
+#include<queue>
+#include<algorithm>
+
+namespace game {
+
+	class GameObjectContainer final
+	{
+	public:
+
+		void clear()noexcept {
+			objects_.clear();
+			creation_.clear();
+			hit_.clear();
+			waitDelet_.clear();
+
+			creation_.shrink_to_fit();
+			hit_.shrink_to_fit();
+			waitDelet_.shrink_to_fit();
+		}
+
+		void registerCreate(std::function<std::unique_ptr<GameObject>()> f, const UINT64 h)noexcept {
+			creation_.emplace_back(h, std::move(f));
+		}
+
+	public:
+		std::vector<std::pair<UINT64, std::function<std::unique_ptr<GameObject>()>>> creation_{};
+		std::vector<UINT64> hit_{};
+
+		std::vector<std::unique_ptr<GameObject>> objects_{};
+		std::unordered_map<UINT64, UINT> objectIndex_{};
+		std::queue<UINT> freeIndex_{};
+
+		std::vector<std::pair<std::unique_ptr<GameObject>, UINT>>waitDelet_{};
+		std::vector<UINT64> deleteHandle_{};
+	};
+	GameObjectContainer container_{};
+
+	void GameObjectManager::update()noexcept
+	{
+		if (!container_.creation_.empty()) {
+			for (auto& create : container_.creation_) {
+				auto p = create.second();
+				p->setHandle(create.first);
+				p->initialize();
+
+				auto index = container_.objects_.size();
+				if (!container_.freeIndex_.empty()) {
+					index = container_.freeIndex_.front();
+					container_.freeIndex_.pop();
+				}
+				else
+				{
+					container_.objects_.emplace_back();
+				}
+
+				container_.objects_[index] = std::move(p);
+				container_.objectIndex_.emplace(create.first, static_cast<UINT>(index));
+			}
+			container_.creation_.clear();
+		}
+		for (auto& obj : container_.objects_) {
+			if (!obj) {
+				continue;
+			}
+			obj->update();
+		}
+	}
+
+	void GameObjectManager::postUpdate()noexcept
+	{
+		if (!container_.hit_.empty()) {
+			for (auto handle : container_.hit_) {
+				auto obj = gameObject(handle);
+				if (!obj) {
+					continue;
+				}
+				auto myPos = obj.value()->world().r[3];
+
+				for (auto& target : container_.objects_) {
+					if (!target || target->handle() == handle || target->typeId() != obj.value()->hitTargetTypeId()) {
+						continue;
+					}
+					auto hitRadius = obj.value()->radius() + target->radius();
+					auto targetPos = target->world().r[3];
+					auto distance = DirectX::XMVectorGetX(DirectX::XMVector3Length(DirectX::XMVectorSubtract(myPos, targetPos)));
+					if (distance < hitRadius) {
+						obj.value()->OnHit();
+					target->OnHit();
+					}
+				}
+			}
+			container_.hit_.clear();
+		}
+		registerWaitDelete();
+
+		if (!container_.waitDelet_.empty()) {
+			for(auto d = container_.waitDelet_.begin(); d != container_.waitDelet_.end();) {
+				if ((d->second--) > 0) {
+					++d;
+					continue;
+				}
+				d = container_.waitDelet_.erase(d);
+			}
+		}
+	}
+
+	//void GameObjectManager::draw(const CommandList& commandList) noexcept {
+
+	//}
+}
