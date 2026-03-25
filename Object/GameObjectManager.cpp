@@ -105,7 +105,79 @@ namespace game {
 		}
 	}
 
-	//void GameObjectManager::draw(const CommandList& commandList) noexcept {
+	void GameObjectManager::draw(const CommandList& commandList) noexcept {
+		constexpr UINT objectShaderSlot_ = 1;
 
-	//}
+		std::vector<GameObject*> drawObjects{};
+		for(auto& obj : container_.objects_) {
+			if (!obj) {
+				continue;
+			}
+			drawObjects.push_back(obj.get());
+		}
+		std::sort(drawObjects.begin(), drawObjects.end(), [](const GameObject* a, const GameObject* b) {
+			return a->typeId() < b->handle();
+			});
+
+		for (auto& obj : drawObjects) {
+			obj->updateDrawBuffer();
+			obj->setDrawCommand(commandList, objectShaderSlot_);
+		}
+	}
+
+	void GameObjectManager::clear()noexcept
+	{
+		container_.clear();
+	}
+
+	std::optional<GameObject*> GameObjectManager::gameObject(UINT64 handle)noexcept
+	{
+		auto it = container_.objectIndex_.find(handle);
+		if (it == container_.objectIndex_.end()) {
+			auto find = std::find_if(container_.creation_.begin(), container_.creation_.end(), [handle](const auto& pair){return pair.first == handle;});
+			if (find == container_.creation_.end()) {
+				return std::nullopt;
+			}
+		}
+		return container_.objects_[it->second].get();
+	}
+
+	void GameObjectManager::registerHit(UINT64 handle)noexcept
+	{
+		container_.hit_.emplace_back(handle);
+	}
+
+	void GameObjectManager::registerDelete(UINT64 handle)noexcept
+	{
+		if(std::find(container_.deleteHandle_.begin(), container_.deleteHandle_.end(), handle) != container_.deleteHandle_.end()) {
+			return;
+		}
+		container_.deleteHandle_.emplace_back(handle);
+	}
+
+	void GameObjectManager::registerCreate(std::function<std::unique_ptr<GameObject>()> create, const UINT64 handle)noexcept
+	{
+		container_.registerCreate(std::move(create), handle);
+	}
+
+	void GameObjectManager::registerWaitDelete()noexcept
+	{
+		if (container_.deleteHandle_.empty()) {
+			return;
+		}
+		for (auto handle : container_.deleteHandle_) {
+			auto it = container_.objectIndex_.find(handle);
+			if (it == container_.objectIndex_.end()) {
+				continue;
+			}
+			container_.waitDelet_.emplace_back(std::move(container_.objects_[it->second]), 10);
+			container_.freeIndex_.push(it->second);
+			container_.objectIndex_.erase(it);
+		}
+		container_.deleteHandle_.clear();
+	}
+
+	GameObjectManager::~GameObjectManager() {
+		clear();
+	}
 }

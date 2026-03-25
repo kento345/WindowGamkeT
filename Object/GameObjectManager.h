@@ -23,6 +23,8 @@ namespace game {
 
 		std::optional<GameObject*> gameObject(UINT64 handle)noexcept;
 
+		void registerHit(UINT64 handle)noexcept;
+
 		void registerDelete(UINT64 handle)noexcept;
 
 	public:
