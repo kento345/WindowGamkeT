@@ -37,10 +37,13 @@
     <ClCompile Include="draw_resource\Shape.cpp" />
     <ClCompile Include="draw_resource\ShapeContainer.cpp" />
     <ClCompile Include="draw_resource\TrianglePolygon.cpp" />
+    <ClCompile Include="Object\Bullet.cpp" />
+    <ClCompile Include="Object\Camera.cpp" />
     <ClCompile Include="Object\Enemy.cpp" />
     <ClCompile Include="Object\GameObject.cpp" />
     <ClCompile Include="Object\GameObjectManager.cpp" />
     <ClCompile Include="Object\Object.cpp" />
+    <ClCompile Include="Object\Player.cpp" />
     <ClCompile Include="window\Input.cpp" />
     <ClCompile Include="window\Window.cpp" />
   </ItemGroup>
@@ -63,10 +66,13 @@
     <ClInclude Include="draw_resource\Shape.h" />
     <ClInclude Include="draw_resource\ShapeContainer.h" />
     <ClInclude Include="draw_resource\TrianglePolygon.h" />
+    <ClInclude Include="Object\Bullet.h" />
+    <ClInclude Include="Object\Camera.h" />
     <ClInclude Include="Object\Enemy.h" />
     <ClInclude Include="Object\GameObject.h" />
     <ClInclude Include="Object\GameObjectManager.h" />
     <ClInclude Include="Object\Object.h" />
+    <ClInclude Include="Object\Player.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="window\Input.h" />
     <ClInclude Include="window\Window.h" />

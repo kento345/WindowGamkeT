@@ -4,23 +4,19 @@
 
 namespace game {
 
-	class Enemy : public GameObject
+	class Player : public GameObject
 	{
 	public:
 
-		Enemy() = default;
+		Player() = default;
 
-		virtual ~Enemy() = default;
+		virtual ~Player() = default;
 
 	public:
 
 		virtual void initialize()noexcept override;
 
 		virtual void update()noexcept override;
-
-	public:
-
-		virtual void OnHit() noexcept override;
 	};
 }
 

@@ -102,6 +102,15 @@
     <ClCompile Include="Object\GameObjectManager.cpp">
       <Filter>object</Filter>
     </ClCompile>
+    <ClCompile Include="Object\Camera.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Bullet.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
@@ -177,6 +186,15 @@
       <Filter>object</Filter>
     </ClInclude>
     <ClInclude Include="Object\GameObjectManager.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Camera.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Bullet.h">
       <Filter>object</Filter>
     </ClInclude>
   </ItemGroup>
