@@ -8,7 +8,7 @@ namespace game {
 	class GameObjectManager final
 	{
 	public:	
-		static GameObjectManager& getInstance()noexcept {
+		static GameObjectManager& instance()noexcept {
 			static GameObjectManager instance;
 			return instance;
 		}
