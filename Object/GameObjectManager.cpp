@@ -155,7 +155,7 @@ namespace game {
 		container_.deleteHandle_.emplace_back(handle);
 	}
 
-	void GameObjectManager::registerCreate(std::function<std::unique_ptr<GameObject>()> create, const UINT64 handle)noexcept
+	void GameObjectManager::registerCreation(std::function<std::unique_ptr<GameObject>()> create, const UINT64 handle)noexcept
 	{
 		container_.registerCreate(std::move(create), handle);
 	}

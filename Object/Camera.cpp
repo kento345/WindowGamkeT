@@ -6,7 +6,7 @@
 namespace {
 
 	constexpr float eyeMoveSpeed_ = 0.06f;
-	constexpr float	 destTargetToView_ ~- 5.0f;
+	constexpr float	 destTargetToView_ = - 5.0f;
 
 	struct ConstBufferData
 	{

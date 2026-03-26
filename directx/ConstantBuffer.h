@@ -6,16 +6,43 @@
 class ConstantBuffer final
 {
 public:
+    //---------------------------------------------------------------------------------
+    /**
+     * @brief    コンストラクタ
+     */
+    ConstantBuffer() = default;
 
-	ConstantBuffer() = default;
-	~ConstantBuffer() = default;
-	bool create(UINT bufferSize)noexcept;
-	ID3D12Resource* constantBuffer()const noexcept;
-	D3D12_GPU_DESCRIPTOR_HANDLE getGpuDescriptorHandle()const noexcept;
+    //---------------------------------------------------------------------------------
+    /**
+     * @brief    デストラクタ
+     */
+    ~ConstantBuffer();
+
+    //---------------------------------------------------------------------------------
+    /**
+     * @brief	コンスタントバッファの作成
+     * @param	bufferSize		コンスタントバッファのサイズ
+     * @return	生成の成否
+     */
+    [[nodiscard]] bool create(UINT bufferSize) noexcept;
+
+    //---------------------------------------------------------------------------------
+    /**
+     * @brief	コンスタントバッファを取得する
+     * @return	コンスタントバッファのポインタ
+     */
+    [[nodiscard]] ID3D12Resource* constantBuffer() const noexcept;
+
+    //---------------------------------------------------------------------------------
+    /**
+     * @brief	GPU 用ディスクリプタハンドルを取得する
+     * @return	GPU 用ディスクリプタハンドル
+     */
+    [[nodiscard]] D3D12_GPU_DESCRIPTOR_HANDLE getGpuDescriptorHandle() const noexcept;
 
 private:
-	Microsoft::WRL::ComPtr<ID3D12Resource> constantBuffer_{};
-	UINT descriptorIndex_{};
-	D3D12_GPU_DESCRIPTOR_HANDLE gpuHandle_{};
+    Microsoft::WRL::ComPtr<ID3D12Resource> constantBuffer_{};   /// コンスタントバッファ
+    UINT                                   descriptorIndex_{};  /// ディスクリプタインデックス
+    D3D12_GPU_DESCRIPTOR_HANDLE            gpuHandle_{};
 };
 
