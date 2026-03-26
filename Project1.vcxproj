@@ -37,6 +37,7 @@
     <ClCompile Include="draw_resource\Shape.cpp" />
     <ClCompile Include="draw_resource\ShapeContainer.cpp" />
     <ClCompile Include="draw_resource\TrianglePolygon.cpp" />
+    <ClCompile Include="entry\Entry.cpp" />
     <ClCompile Include="Object\Bullet.cpp" />
     <ClCompile Include="Object\Camera.cpp" />
     <ClCompile Include="Object\Enemy.cpp" />

@@ -111,6 +111,9 @@
     <ClCompile Include="Object\Bullet.cpp">
       <Filter>object</Filter>
     </ClCompile>
+    <ClCompile Include="entry\Entry.cpp">
+      <Filter>entry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window\Input.h">
