@@ -2,14 +2,39 @@
 
 #include"Shape.h"
 
-class TrianglePolygon final : public Shape
-{
-	TrianglePolygon() = default;
-	~TrianglePolygon() = default;
+//---------------------------------------------------------------------------------
+/**
+ * @brief	ポリゴンクラス
+ */
+class TrianglePolygon final : public Shape {
+
+public:
+    //---------------------------------------------------------------------------------
+    /**
+     * @brief    コンストラクタ
+     */
+    TrianglePolygon() = default;
+
+    //---------------------------------------------------------------------------------
+    /**
+     * @brief    デストラクタ
+     */
+    ~TrianglePolygon() = default;
 
 private:
-	virtual bool createVertexBuffer() noexcept override;
+    //---------------------------------------------------------------------------------
+    /**
+     * @brief	頂点バッファの生成
+     * @return	成功すれば true
+     */
+    [[nodiscard]] virtual bool createVertexBuffer() noexcept override;
 
-	virtual bool createIndexBuffer() noexcept override;
+    //---------------------------------------------------------------------------------
+    /**
+     * @brief	インデックスバッファの生成
+     * @return	成功すれば true
+     */
+    [[nodiscard]] virtual bool createIndexBuffer() noexcept override;
+
 };
 
