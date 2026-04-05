@@ -38,7 +38,7 @@ namespace game {
 		DirectX::XMVECTOR temp = DirectX::XMVectorSet(pos.x, pos.y, pos.z, 0.0f);
 		world_.r[3] = DirectX::XMVectorAdd(world_.r[3], temp);
 
-		if (Input::instance().getTrigger('B')) {
+		if (Input::instance().getTrigger(VK_SPACE)) {
 			GameObjectManager::instance().createObject<Bullet>(handle());
 		}
 	}

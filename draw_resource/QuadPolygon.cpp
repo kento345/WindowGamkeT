@@ -14,7 +14,11 @@ bool QuadPolygon::createVertexBuffer() noexcept {
 		{{-0.5f, 0.5f, 0.0f}, {1.0f, 0.0f, 0.0f, 1.0f}},
 		{{0.5f, 0.5f, 0.0f}, {1.0f, 0.0f, 0.0f, 1.0f}},
 		{{-0.5f, -0.5f, 0.0f}, {1.0f, 0.0f, 0.0f, 1.0f}},
-		{{0.5f, -0.5f, 0.0f}, {1.0f, 0.0f, 0.0f, 1.0f}}
+		{{0.5f, -0.5f, 0.0f}, {1.0f, 0.0f, 0.0f, 1.0f}},
+		//{{0.5f, -0.5f, -0.5f}, {1.0f, 0.0f, 0.0f, 1.0f}},
+		//{{-0.5f, -0.5f, -0.5f}, {1.0f, 0.0f, 0.0f, 1.0f}},
+	 //   {{0.5f, 0.5f, -0.5f}, {1.0f, 0.0f, 0.0f, 1.0f}},
+		//{{-0.5f, 0.5f, -0.5f}, {1.0f, 0.0f, 0.0f, 1.0f}},
 	};
 	const auto vertexBufferSize = sizeof(vertices);
 
@@ -71,7 +75,7 @@ bool QuadPolygon::createVertexBuffer() noexcept {
 
 bool QuadPolygon::createIndexBuffer() noexcept {
 	uint16_t indices[] = {
-		0, 1, 2, 3
+		0, 1, 2, 3, 
 	};
 	const auto indexBufferSize = sizeof(indices);
 	D3D12_HEAP_PROPERTIES heapPropery{};

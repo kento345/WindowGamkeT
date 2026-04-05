@@ -1,7 +1,8 @@
 #include "Camera.h"
+#include"../window/Input.h"
+#include"../Object/GameObjectManager.h"
 #include<cmath>
 
-#include"../window/input.h"
 
 namespace {
 
@@ -35,10 +36,26 @@ namespace game {
 	}
 
 	void Camera::update()noexcept {
+		//GameObject::update();
+
+		//static float angle = 0.0f;
+
+		////DirectX::XMFLOAT3 pos{};
+		//if (Input::instance().getKey(VK_LEFT)) {
+		//	angle += eyeMoveSpeed_;
+		//	position_.x = destTargetToView_ * std::sinf(angle);
+		//	position_.z = destTargetToView_ * std::sinf(angle);
+		//}
+		//if (Input::instance().getKey(VK_RIGHT)) {
+		//	angle -= eyeMoveSpeed_;
+		//	position_.x = destTargetToView_ * std::sinf(angle);
+		//	position_.z = destTargetToView_ * std::cosf(angle);
+		//}
+
 		view_ = DirectX::XMMatrixLookAtLH(
-			DirectX::XMLoadFloat3(&position_),
-			DirectX::XMLoadFloat3(&target_),
-			DirectX::XMLoadFloat3(&up_));
+                DirectX::XMLoadFloat3(&position_),
+                DirectX::XMLoadFloat3(&target_),
+                DirectX::XMLoadFloat3(&up_));
 	}
 
 	void Camera::createDrawBuffer()noexcept {
