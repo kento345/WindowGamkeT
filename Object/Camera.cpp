@@ -1,6 +1,7 @@
 #include "Camera.h"
 #include"../window/Input.h"
 #include"../Object/GameObjectManager.h"
+
 #include<cmath>
 
 
@@ -36,21 +37,20 @@ namespace game {
 	}
 
 	void Camera::update()noexcept {
-		//GameObject::update();
 
-		//static float angle = 0.0f;
+		static float angle = 0.0f;
 
-		////DirectX::XMFLOAT3 pos{};
-		//if (Input::instance().getKey(VK_LEFT)) {
-		//	angle += eyeMoveSpeed_;
-		//	position_.x = destTargetToView_ * std::sinf(angle);
-		//	position_.z = destTargetToView_ * std::sinf(angle);
-		//}
-		//if (Input::instance().getKey(VK_RIGHT)) {
-		//	angle -= eyeMoveSpeed_;
-		//	position_.x = destTargetToView_ * std::sinf(angle);
-		//	position_.z = destTargetToView_ * std::cosf(angle);
-		//}
+		//DirectX::XMFLOAT3 pos{};
+		if (Input::instance().getKey(VK_LEFT)) {
+			angle += eyeMoveSpeed_;
+			position_.x = destTargetToView_ * std::sinf(angle);
+			//position_.z = destTargetToView_ * std::sinf(angle);
+		}
+		if (Input::instance().getKey(VK_RIGHT)) {
+			angle -= eyeMoveSpeed_;
+			position_.x = destTargetToView_ * std::sinf(angle);
+			//position_.z = destTargetToView_ * std::cosf(angle);
+		}
 
 		view_ = DirectX::XMMatrixLookAtLH(
                 DirectX::XMLoadFloat3(&position_),
@@ -60,7 +60,7 @@ namespace game {
 
 	void Camera::createDrawBuffer()noexcept {
 		if (!constantBuffer_.create(sizeof(ConstBufferData))) {
-			assert(false && "カメラyぷコンスタントバッファの作成に失敗しました");
+			assert(false && "カメラ用コンスタントバッファの作成に失敗しました");
 		}
 	}
 
